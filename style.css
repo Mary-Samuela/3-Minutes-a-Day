@@ -145,3 +145,31 @@ footer {
     display: none;
 }
 
+/* styling for About Page */
+
+h3 {
+   color: #0056b3;
+   margin-top: 25px;
+}
+
+.cta {
+   text-align: center;
+   margin-top: 40px;
+   background-color: #eaf4ff;
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.cta .button {
+   display: inline-block;
+   background-color: #007bff;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 8px;
+   text-decoration: none;
+   margin-top: 10px;
+}
+
+.cta .button:hover {
+   background-color: #0056b3;
+}
