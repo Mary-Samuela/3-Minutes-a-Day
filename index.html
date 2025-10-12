@@ -6,10 +6,66 @@
     <title>Daily Reflections</title>
 </head>
 <body>
+   
+    <!--Header  -->
+    <header>
+        <h1>3 Minutes-a-Day with Jesus</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <!-- Main Section -->
+     <main>
+        <section class="intro">
+            <h2>Your Word is a Lamp for My Feet</h2>
+            <p>Select a date to receive a Bible Verse and Reflection for your Day</p>
+        </section>
+
+        <!--Form for Date Picker  -->
+        <section id="verseSection">
+            <form id="verseForm">
+                <label for="datePicker">Pick a Date</label>
+                <input type="date" id="datePicker" required>
+                <button type="submit" getVerseBtn>Get Verse</button>                
+            </form>
+
+        <!--Random Button  -->
+        <button id="randomVerseBtn" class="secondary">Inspire Me Randomly</button>
+        
+        <!-- Verse of the Day -->
+         <h3 id="verseOfDayHeading" class="hidden">Verse of the Day</h3>
+
+         <!--Verse Display  -->
+        <div id="verseDisplay" class="hidden">
+            <blockquote id="verseText"></blockquote>
+            <p id="verseRef"></p>
+            <p id="verseReflection"></p>
+        </div> 
+
+        <!-- Share, Copy -->
+         <div id="shareSection" class="hidden">
+            <h4>Share this Verse</h4>
+            <div class="share-buttons">
+                <button id="shareWhatsApp" title="Share on WhatsApp">WhatsApp</button>
+                <button id="shareX" title="Share on X">X</button>
+                <button id="shareEmail" title="Share on Email">Email</button>
+                <button id="copyVerse" title="Copy verse to clipboard">Copy Verse</button>
+            </div>
+         </div>
+        </section>
+     </main>
+
+     <!-- footer -->
+    <footer>
+         <p>@2025 Mary Samuela</p>
+    </footer>
 
 
 
-    
 </body>
 </html>
