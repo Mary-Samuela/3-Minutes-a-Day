@@ -38,11 +38,9 @@ function displayVerse(selectedVerse) {
 
 // show verse display and heading
 verseDisplay.classList.remove("hidden");
-verseOfDayHeading.classList.remove("hedden");
+verseOfDayHeading.classList.remove("hidden");
 shareSection.classList.remove("hidden");
 
-// add fade-in effect
-verseDisplay.classList.add("show");
 
 // Generate verse based on date input
 function getVerseByDate(event) {
