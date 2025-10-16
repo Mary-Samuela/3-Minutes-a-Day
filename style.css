@@ -5,6 +5,9 @@ body {
     margin: 0;
     color: #333;
 }
+ h2 {
+   color: blue;
+ }
 /* Header */
 
 header {
@@ -29,8 +32,42 @@ header {
    height: 150px;
    object-fit: cover;
    border-radius: 10px;
+   float: left;
+}
+.header-image2 {
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   border-radius: 10px;
+   float: right;
+}
+.contact {
+width: 400px;
+height: 200px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.kneel {
+   width: 400px;
+   height: 200px;
+   float: inline-start;
+   padding:10px;
 }
 
+.hope {
+   width: 150px;
+   height: 150px;
+   float:inline-end;
+   padding: 5px;
+}
+.thanks {
+   width: 200px;
+   height: 200px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
 header h1 {
    font-size: 2.5rem;
    margin: 0;
@@ -46,7 +83,16 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
-
+.lamp {
+   width: 100px;
+   height: 100px;
+   float: right;
+}  
+.lamp1 {
+   width: 100px;
+   height: 100px;
+   float: left;
+}   
 nav a {
     color: white;
     text-decoration: none;
@@ -77,8 +123,8 @@ nav a.active, nav a:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
     margin-bottom: 15px;
+    padding: 25px;
  }
 
  button {
@@ -103,9 +149,14 @@ nav a.active, nav a:hover {
     background-color: #5a6268;
  }
 
+ #verseOfDayHeading {
+   text-align: center;
+   font-size: 1.8rem;
+ }
+
  #verseDisplay {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 10px;
  }
 
  #verseRef {
@@ -115,7 +166,7 @@ nav a.active, nav a:hover {
  }
 
  #verseReflection {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 0.95em;
     color: #444;
  }
@@ -123,7 +174,6 @@ nav a.active, nav a:hover {
  #shareSection {
     margin-top: 20px;
     text-align: center;
-    opacity: ;
     transition: opacity 1s ease-in;
  }
 
@@ -172,6 +222,7 @@ footer {
 h3 {
    color: #0056b3;
    margin-top: 25px;
+   font-size: 1.5rem;
 }
 
 .cta {
@@ -209,8 +260,9 @@ h3 {
 
 .contact-section h2 {
    text-align: center;
-   color: #333;
+   color: blue;
    margin-bottom: 10px;
+   font-size: 2rem;
 }
 
 .contact-section p {

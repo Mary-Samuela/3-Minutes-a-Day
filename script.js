@@ -9,6 +9,16 @@ const verses = [
         text: "I can do all things through Christ who strengthens me.",
         ref: "Philippians 4:13",
         reflection: "Find strength in Christ to overcome every challenge today."
+    },
+    {
+    text: "Rejoice in the Lord always, again I say rejoice.",
+    ref: "Phil 4:4",
+    reflection: "True joy is found in the Lord."
+    },
+    {
+    text: "Therefore do not worry about tomorrow.",
+    ref: "Matthew 6:34.",    
+    reflection: "Focus on the present day and do not let future anxieties overwhelmn you."
     }
 ];
 
@@ -23,7 +33,7 @@ const verseOfDayHeading = document.getElementById("verseOfDayHeading");
 
 const randomVerseBtn = document.getElementById("randomVerseBtn");
 const shareSection = document.getElementById("shareSection");
-const copyVerseBtn = document.getElementById("copyVerseBtn");
+const copyVerseBtn = document.getElementById("copyVerse");
 const shareWhatsApp = document.getElementById("shareWhatsApp");
 const shareX = document.getElementById("shareX");
 const shareEmail = document.getElementById("shareEmail");
@@ -33,7 +43,9 @@ const shareEmail = document.getElementById("shareEmail");
 function displayVerse(selectedVerse) {
     verseText.textContent = `"${selectedVerse.text}"`;
     verseRef.textContent = selectedVerse.ref;
-    verseReflection.textContent =selectedVerse.reflection;
+    verseReflection.textContent = selectedVerse.reflection;
+
+    localStorage.setItem("lastVerse", JSON.stringify(selectedVerse));
 }
 
 // show verse display and heading
@@ -72,10 +84,12 @@ function getRandomVerse() {
     displayVerse(selectedVerse);
 }
 
+
 // copy verse to clipboard
 function copyVerse() {
-    const textToCopy = `${verseText.textContent} - ${verseRef.textContent}\n${verseReflection.textContent}`;
-    navigator.clipboard.writeText(textCopy)
+    const textToCopy = `${verseText.textContent} - ${verseRef.textContent}
+    \n${verseReflection.textContent}`;
+    navigator.clipboard.writeText(textToCopy)
     .then(() => alert("verse copied to clipboard"))
     .catch(() =>alert("could not copy verse. Please try again"))
 }
@@ -112,6 +126,15 @@ copyVerseBtn.addEventListener("click",copyVerse);
 shareWhatsApp.addEventListener("click",shareOnWhatsApp);
 shareX.addEventListener("click",shareOnX);
 shareEmail.addEventListener("click",shareOnEmail);
+
+// Restore the last verse viewed
+window.addEventListener("load", ()=> {
+    const savedVerse = localStorage.getItem("lastVerse");
+    if (savedVerse) {
+        const verse = JSON.parse(savedVerse);
+        displayVerse(verse);
+    }
+});
 
 // Form Submission
 
