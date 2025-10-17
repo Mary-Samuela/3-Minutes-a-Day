@@ -323,4 +323,22 @@ input, textarea {
       padding: 15px;
       background-color: greenyellow;
    }
+   button {
+      width: 100%;
+      margin: 10px 0;
+      font-size: 1rem;
+   }
+      #verseText {
+         font-size: 1.1rem;
+         line-height: 1.5;
+      }
+      #verseRef {
+         font-weight: bold;
+         display: block;
+         margin-top: 5px;
+      }
+      #verseReflection {
+         font-size: 0.95rem;
+         color: #555;
+      }
 }
