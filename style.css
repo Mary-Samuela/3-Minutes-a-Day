@@ -310,3 +310,17 @@ input, textarea {
    text-align: center;
    font-weight: bold;
 }
+
+@media (max-width: 600px) {
+   header {
+      font-size: 1.1rem;
+      padding: 15px 5px;
+      background-color: brown;
+      color:burlywood;
+   }
+   main {
+      width: 90%;
+      padding: 15px;
+      background-color: greenyellow;
+   }
+}
